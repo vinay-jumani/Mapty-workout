@@ -193,6 +193,7 @@ a:visited {
 
 /* MAP */
 #map {
+  z-index: 1;
   flex: 1;
   width: 60%;
   height: 100%;
