@@ -1,0 +1,340 @@
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--color-light--2);
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overscroll-behavior-y: none;
+
+  background-color: #fff;
+  padding: 2.5rem;
+
+  display: flex;
+}
+
+/* GENERAL */
+a:link,
+a:visited {
+  color: var(--color-brand--1);
+}
+
+/* SIDEBAR */
+.sidebar {
+  /* width: 30vw; */
+  background-color: var(--color-dark--1);
+  padding: 3rem 5rem 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 20vw;
+  max-width: 30vw;
+}
+
+.logo {
+  height: 5.2rem;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+
+.workouts {
+  list-style: none;
+  height: 77vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.workouts::-webkit-scrollbar {
+  width: 0;
+}
+
+.workout {
+  background-color: var(--color-dark--2);
+  border-radius: 5px;
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+}
+.workout--running {
+  border-left: 5px solid var(--color-brand--2);
+}
+.workout--cycling {
+  border-left: 5px solid var(--color-brand--1);
+}
+
+.workout__title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.workout__details {
+  display: flex;
+  align-items: baseline;
+}
+
+.workout__icon {
+  font-size: 1.8rem;
+  margin-right: 0.2rem;
+  height: 0.28rem;
+}
+
+.workout__value {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.workout__unit {
+  font-size: 1.1rem;
+  color: var(--color-light--1);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 5px;
+  padding: 1.5rem 2.75rem;
+  margin-bottom: 1.75rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+
+  /* Match height and activity boxes */
+  height: 9.25rem;
+  transition: all 0.5s, transform 1ms;
+}
+
+.form.hidden {
+  transform: translateY(-30rem);
+  height: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+  opacity: 0;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+}
+
+.form__row--hidden {
+  display: none;
+}
+
+.form__label {
+  flex: 0 0 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.form__btn {
+  display: none;
+}
+
+.copyright {
+  margin-top: auto;
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--color-light--1);
+}
+
+.twitter-link:link,
+.twitter-link:visited {
+  color: var(--color-light--1);
+  transition: all 0.2s;
+}
+
+.twitter-link:hover,
+.twitter-link:active {
+  color: var(--color-light--2);
+}
+
+/* MAP */
+#map {
+  flex: 1;
+  width: 60%;
+  height: 100%;
+  background-color: var(--color-light--1);
+}
+
+/* Popup width is defined in JS using options */
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.5rem;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-dark--1);
+}
+
+.running-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-brand--2);
+}
+.cycling-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-brand--1);
+}
+
+.submit{
+  background-color: #00c46a;
+ height: 50px;
+ cursor: pointer;
+ border-radius: 15px;
+}
+
+.Rules{
+  border-radius: 10px;
+  width: 65vw;
+  min-width: 20vw;
+  height: 47vh;
+  max-width: 70vw;
+  background-color: #5DADE2;
+  z-index: 2;
+  position: absolute;
+  margin: 10vw 21vw;
+}
+
+.rules-p{
+  font-size: 2.5rem;
+  padding: 10px 10px 0px 10px;
+}
+
+.okbtn{
+  margin-left: 10vw;
+  width: 10vw;
+  height: 5vh;
+  border: none;
+  background-color: white;
+  color: black;
+  margin-top: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.hidden{
+  display: none;
+}
+
+
+
+@media (min-width : 250px ) and (max-width : 1300px){
+  body{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+#map{
+  display: flex;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.Rules{
+  top: 0;
+  width: 189vw;
+  height: 75vh;
+  margin: 146px 0px 10px 40px;
+  left: 0;
+  right: 0;
+}
+.rules-p{
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0px;
+}
+
+.okbtn{
+  height: 28px;
+  width: 122px;
+  border-radius: 15px;
+  margin: 0;
+}
+
+
+.sidebar{
+  max-width: 100%;
+  max-height: 40%;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.workout--running{
+  min-width: 25vw;
+  max-width: 98vw;
+}
+
+.workout--cycling{
+  min-width: 25vw;
+  max-width: 98vw;
+
+}
+
+.logo{
+  height: 3rem;
+  align-self: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.copyright{
+  font-size: 1rem;
+  text-align: left;
+  /* margin-top: 0px; */
+  padding-top: 9px;
+}
+
+.submit{
+  height: 150px;
+}
+}
