@@ -236,13 +236,14 @@ a:visited {
   min-width: 20vw;
   height: 47vh;
   max-width: 70vw;
-  background-color: #5DADE2;
+  background-color: var(--color-dark--1);
   z-index: 2;
   position: absolute;
   margin: 10vw 21vw;
 }
 
 .rules-p{
+  color: white;
   font-size: 2.5rem;
   padding: 10px 10px 0px 10px;
 }
@@ -284,14 +285,14 @@ a:visited {
 .Rules{
   top: 0;
   width: 189vw;
-  height: 75vh;
-  margin: 146px 0px 10px 40px;
+  height: 40vh;
+  margin: 35vh 0px 10px 40px;
   left: 0;
   right: 0;
 }
 .rules-p{
-  font-size: 1.5rem;
-  padding: 0;
+  font-size: 1.50rem;
+  padding: 20px;
   margin: 0px;
 }
 
