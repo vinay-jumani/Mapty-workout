@@ -285,8 +285,9 @@ a:visited {
 .Rules{
   top: 0;
   width: 189vw;
-  height: 40vh;
-  margin: 35vh 0px 10px 40px;
+  height: 100vh;
+  max-height: 80vh;
+  margin: 5vh 0px 10px 40px;
   left: 0;
   right: 0;
 }
